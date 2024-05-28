@@ -6,16 +6,16 @@ const Card = ({image, title, text ,buttonName}) => {
   return (
 
     
-<div className="card my-3 text-center" style={{ width: "18rem", display: "inline-block", margin: "10px" }}>
-      <img src={image} className="card-img-top" alt="..." style={{ height: "290px", objectFit: "cover" }}/>
-      <div className="card-body">
-        <h5 className="card-title">{title}</h5>
-        <p className="card-text">{text}</p>
-        <div className="div">
-        <a href="#" className="btn btn-primary mt-auto align-self-center">{buttonName}</a>
-        </div>
-          </div>
-        </div>
+<div className="card my-3 text-center" style={{ width: "18rem", display: "inline-block", margin: "10px", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+  <img src={image} className="card-img-top" alt="..." style={{ height: "290px", objectFit: "cover" }}/>
+  <div className="card-body d-flex flex-column">
+    <h5 className="card-title">{title}</h5>
+    <p className="card-text">{text}</p>
+    <div className="mt-auto border-top-dark">
+      <a href="#" className="btn btn-primary">{buttonName}</a>
+    </div>
+  </div>
+</div>
 
   )
 };
